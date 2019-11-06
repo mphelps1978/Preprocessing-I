@@ -135,16 +135,61 @@ body {
   height: 100%;
 }
 * {
+  font-size: 62.5%;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   max-width: 100%;
-  border: 1px solid black;
+  border: 1px solid lightgrey !important;
 }
 body {
-  background: lightgrey;
+  background: darkgrey;
+}
+h1 {
+  font-size: 6rem;
 }
 .container {
   width: 90%;
   margin: 0 auto;
+}
+nav {
+  border-bottom: 2px solid black;
+}
+nav .navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+}
+nav .navbar li {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2%;
+}
+nav .navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+header .avatar {
+  width: 20%;
+}
+header img {
+  border-radius: 50%;
+}
+header .hero-text {
+  width: 100%;
+  text-align: center;
+  padding-top: 2%;
+}
+header .hero-text .icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header .hero-text .icons li {
+  padding: 4%;
+  opacity: 40%;
 }
