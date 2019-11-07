@@ -1,1 +1,393 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+/************************
+******** IMPORTS ********
+*************************/
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Supermercado One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Supermercado One Regular'), local('SupermercadoOne-Regular'), url(https://fonts.gstatic.com/s/supermercadoone/v9/OpNXnpQWg8jc_xps_Gi14kVVEXOn20H9NA.ttf) format('truetype');
+}
+/************************
+******* VARIABLES *******
+*************************/
+/************************
+******* MIXINS **********
+*************************/
+.section-header {
+  text-align: right;
+  font-size: 3rem;
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+/************************
+**** GENERIC STYLING ****
+*************************/
+body {
+  background: #1a465f;
+  font-size: 62.5%;
+  font-family: 'Oswald';
+}
+h1 {
+  font-size: 6rem;
+  font-family: 'Supermercado One';
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+h2 {
+  text-align: right;
+  font-size: 3rem;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  font-family: 'Supermercado One';
+}
+p {
+  font-size: 1.5rem;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 3%;
+  background-color: #f2f2f2;
+  padding: 0 20px 0;
+  margin-top: 20%;
+}
+@media (max-width: 500px) {
+  .container {
+    margin-top: 73%;
+  }
+}
+.fixed {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: #333;
+  width: 70%;
+  margin: 0 auto;
+  margin-left: -20px;
+  text-align: center;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+/************************
+**** NESTED STYLING *****
+*************************/
+nav {
+  border-bottom: 2px solid black;
+}
+nav .navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  nav .navbar ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+nav .navbar li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1%;
+}
+@media (max-width: 500px) {
+  nav .navbar li {
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid black;
+  }
+}
+nav .navbar li:hover {
+  background: #1a465f;
+}
+nav .navbar a {
+  text-decoration: none;
+  color: #1c879c;
+  padding: 0 8%;
+}
+@media (max-width: 500px) {
+  nav .navbar a {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+header .avatar {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  header .avatar {
+    display: none;
+  }
+}
+header img {
+  border-radius: 25%;
+}
+header .hero-text {
+  width: 100%;
+  text-align: center;
+  padding-top: 2%;
+}
+header .hero-text .icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header .hero-text .icons li {
+  padding: 4%;
+  opacity: 40%;
+}
+#history li {
+  font-size: 2rem;
+}
+#contact form {
+  font-size: 2rem;
+  /* Clear floats after the columns */
+}
+#contact form input[type='text'],
+#contact form select,
+#contact form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #1a465f;
+  border-radius: 4px;
+  resize: vertical;
+}
+@media (max-width: 500px) {
+  #contact form input[type='text'],
+  #contact form select,
+  #contact form textarea {
+    resize: none;
+  }
+}
+#contact form label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+#contact form input[type='submit'] {
+  background-color: #1c879c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+#contact form input[type='submit']:hover {
+  background-color: #1a465f;
+}
+#contact form .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+#contact form .col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+#contact form .row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media (max-width: 500px) {
+  #contact .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  padding-bottom: 20px;
+}
+@media (max-width: 500px) {
+  footer p {
+    font-size: 1rem;
+  }
+}
+table {
+  font-size: 2rem;
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 auto;
+}
+table tr {
+  padding: 1%;
+  border: 1px solid black;
+}
+table tr:nth-child(even) {
+  background: #b4e6cf;
+}
+table tr:nth-child(odd) {
+  background: #d5e6e0;
+}
+@media (max-width: 500px) {
+  table tr {
+    font-size: 1rem;
+  }
+}
+table td {
+  padding: 1%;
+}
