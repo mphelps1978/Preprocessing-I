@@ -181,6 +181,11 @@ h1 {
   font-size: 6rem;
   font-family: 'Supermercado One';
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
 h2 {
   text-align: right;
   font-size: 3rem;
@@ -199,6 +204,11 @@ p {
   padding: 0 20px 0;
   margin-top: 20%;
 }
+@media (max-width: 500px) {
+  .container {
+    margin-top: 73%;
+  }
+}
 /************************
 ***** NESTED STYLING*****
 *************************/
@@ -210,11 +220,25 @@ nav .navbar ul {
   justify-content: flex-end;
   font-size: 1.5rem;
 }
+@media (max-width: 500px) {
+  nav .navbar ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
 nav .navbar li {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 1%;
+}
+@media (max-width: 500px) {
+  nav .navbar li {
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid black;
+  }
 }
 nav .navbar li:hover {
   background: #1a465f;
@@ -223,6 +247,12 @@ nav .navbar a {
   text-decoration: none;
   color: #1c879c;
   padding: 0 8%;
+}
+@media (max-width: 500px) {
+  nav .navbar a {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
 }
 header {
   display: flex;
@@ -234,6 +264,11 @@ header {
 }
 header .avatar {
   width: 50%;
+}
+@media (max-width: 500px) {
+  header .avatar {
+    display: none;
+  }
 }
 header img {
   border-radius: 25%;
@@ -299,8 +334,19 @@ header .hero-text .icons li {
   display: table;
   clear: both;
 }
+@media (max-width: 500px) {
+  #contact .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
 footer {
   padding-bottom: 20px;
+}
+@media (max-width: 500px) {
+  footer p {
+    font-size: 1rem;
+  }
 }
 table {
   font-size: 2rem;
@@ -309,7 +355,7 @@ table {
   margin: 0 auto;
 }
 table tr {
-  padding: 20px;
+  padding: 1%;
   border: 1px solid black;
 }
 table tr:nth-child(even) {
@@ -318,8 +364,13 @@ table tr:nth-child(even) {
 table tr:nth-child(odd) {
   background: #d5e6e0;
 }
+@media (max-width: 500px) {
+  table tr {
+    font-size: 1rem;
+  }
+}
 table td {
-  padding: 20px;
+  padding: 1%;
 }
 /************************
 *****  OTHER STYLING*****
