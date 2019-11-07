@@ -164,6 +164,7 @@ body {
 @hover-color: #1a465f;
 @heading-font: 'Supermercado One';
 @body-font: 'Oswald';
+@border: 1px solid black;
 
 /************************
 ******* MIXINS **********
@@ -227,22 +228,42 @@ nav {
 			.flex-normal();
 			justify-content: flex-end;
 			font-size: 1.5rem;
+
+			@media (max-width: 500px) {
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+			} //close media query
 		} //close ul
+
 		li {
 			.flex-normal();
 			justify-content: flex-end;
 			align-items: center;
 			padding: 1%;
 
+			@media (max-width: 500px) {
+				width: 100%;
+				justify-content: center;
+				border-bottom: @border;
+			} //close media query
+
 			&:hover {
 				background: @hover-color;
-			}
-		}
+			} //close pseudo-class
+		} // close li
 
 		a {
 			text-decoration: none;
 			color: @link-color;
-padding: 0 8%;
+			padding: 0 8%;
+
+			@media (max-width: 500px) {
+				padding-top: 3%;
+				padding-bottom: 3%;
+				// border-top: @border;
+				// border-bottom: @border;
+			} //close media query
 		} //close anchors
 	} // close navbar
 } // close nav
@@ -354,7 +375,7 @@ table {
 	text-align: center;
 	margin: 0 auto;
 	tr {
-		padding: 20px;
+		padding: 1%;
 		.standard-border();
 		&:nth-child(even) {
 			background: #b4e6cf;
@@ -364,10 +385,9 @@ table {
 		} // close odd rows
 	} // close tr
 	td {
-		padding: 20px;
+		padding: 1%;
 	} //close TD
 } // close table
-
 
 /************************
 *****  OTHER STYLING*****
@@ -378,11 +398,9 @@ table {
 	position: fixed;
 	top: 0;
 	background-color: #333;
-width: 70%;
+	width: 70%;
 	margin: 0 auto;
 	margin-left: -20px;
 	text-align: center;
 	border-radius: 3%;
 }
-
-
