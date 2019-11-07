@@ -303,6 +303,13 @@ header .hero-text .icons li {
   border-radius: 4px;
   resize: vertical;
 }
+@media (max-width: 500px) {
+  #contact form input[type='text'],
+  #contact form select,
+  #contact form textarea {
+    resize: none;
+  }
+}
 #contact form label {
   padding: 12px 12px 12px 0;
   display: inline-block;
