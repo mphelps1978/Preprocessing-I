@@ -289,6 +289,7 @@ header {
 	border-bottom: 2px solid black;
 	padding-top: 2%;
 	padding-bottom: 2%;
+	z-index: 2;
 
 	.avatar {
 		width: 50%;
@@ -349,6 +350,12 @@ header {
 			border: 1px solid @hover-color;
 			border-radius: 4px;
 			resize: vertical;
+
+			// need a query here to stop the resize of the textarea on mobile
+			@media (max-width: 500px) {
+				resize: none;
+			} // close media query
+
 		} // close input/select/textarea
 		label {
 			padding: 12px 12px 12px 0;

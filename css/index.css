@@ -261,6 +261,7 @@ header {
   border-bottom: 2px solid black;
   padding-top: 2%;
   padding-bottom: 2%;
+  z-index: 2;
 }
 header .avatar {
   width: 50%;
@@ -302,6 +303,13 @@ header .hero-text .icons li {
   border: 1px solid #1a465f;
   border-radius: 4px;
   resize: vertical;
+}
+@media (max-width: 500px) {
+  #contact form input[type='text'],
+  #contact form select,
+  #contact form textarea {
+    resize: none;
+  }
 }
 #contact form label {
   padding: 12px 12px 12px 0;
