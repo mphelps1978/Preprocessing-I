@@ -209,8 +209,20 @@ p {
     margin-top: 73%;
   }
 }
+.fixed {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: #333;
+  width: 70%;
+  margin: 0 auto;
+  margin-left: -20px;
+  text-align: center;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
 /************************
-***** NESTED STYLING*****
+**** NESTED STYLING *****
 *************************/
 nav {
   border-bottom: 2px solid black;
@@ -378,18 +390,4 @@ table tr:nth-child(odd) {
 }
 table td {
   padding: 1%;
-}
-/************************
-*****  OTHER STYLING*****
-*************************/
-.fixed {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  background-color: #333;
-  width: 70%;
-  margin: 0 auto;
-  margin-left: -20px;
-  text-align: center;
-  border-radius: 3%;
 }
