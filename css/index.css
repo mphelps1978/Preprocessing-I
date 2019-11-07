@@ -140,26 +140,67 @@ body {
   margin: 0;
   max-width: 100%;
 }
+/************************
+******** IMPORTS ********
+*************************/
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Supermercado One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Supermercado One Regular'), local('SupermercadoOne-Regular'), url(https://fonts.gstatic.com/s/supermercadoone/v9/OpNXnpQWg8jc_xps_Gi14kVVEXOn20H9NA.ttf) format('truetype');
+}
+/************************
+******* VARIABLES *******
+*************************/
+/************************
+******* MIXINS **********
+*************************/
 .section-header {
   text-align: right;
   font-size: 3rem;
   padding-top: 3%;
   padding-bottom: 2%;
 }
+/************************
+**** GENERIC STYLING ****
+*************************/
 body {
-  background: darkgrey;
+  background: #1a465f;
   font-size: 62.5%;
+  font-family: 'Oswald';
 }
 h1 {
   font-size: 6rem;
+  font-family: 'Supermercado One';
+}
+h2 {
+  text-align: right;
+  font-size: 3rem;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  font-family: 'Supermercado One';
 }
 p {
   font-size: 1.5rem;
 }
 .container {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 0 20px 0;
 }
+/************************
+***** NESTED STYLING*****
+*************************/
 nav {
   border-bottom: 2px solid black;
 }
@@ -173,15 +214,20 @@ nav .navbar li {
   justify-content: flex-end;
   padding: 2%;
 }
+nav .navbar li:hover {
+  background: #1a465f;
+}
 nav .navbar a {
   text-decoration: none;
-  color: inherit;
+  color: #1c879c;
 }
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid black;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 header .avatar {
   width: 50%;
@@ -203,55 +249,28 @@ header .hero-text .icons li {
   padding: 4%;
   opacity: 40%;
 }
-#intro h2 {
-  text-align: right;
-  font-size: 3rem;
-  padding-top: 3%;
-  padding-bottom: 2%;
-}
-#skillset h2 {
-  text-align: right;
-  font-size: 3rem;
-  padding-top: 3%;
-  padding-bottom: 2%;
-}
-#history h2 {
-  text-align: right;
-  font-size: 3rem;
-  padding-top: 3%;
-  padding-bottom: 2%;
-}
 #history li {
-  font-size: 2.5rem;
-}
-#contact {
-  /* Clear floats after the columns */
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-}
-#contact h2 {
-  text-align: right;
-  font-size: 3rem;
-  padding-top: 3%;
-  padding-bottom: 2%;
+  font-size: 2rem;
 }
 #contact form {
   font-size: 2rem;
+  /* Clear floats after the columns */
 }
-#contact input[type=text],
-#contact select,
-#contact textarea {
+#contact form input[type='text'],
+#contact form select,
+#contact form textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #1a465f;
   border-radius: 4px;
   resize: vertical;
 }
-#contact label {
+#contact form label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
-#contact input[type=submit] {
-  background-color: #4CAF50;
+#contact form input[type='submit'] {
+  background-color: #1c879c;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -259,34 +278,24 @@ header .hero-text .icons li {
   cursor: pointer;
   float: right;
 }
-#contact input[type=submit]:hover {
-  background-color: #45a049;
+#contact form input[type='submit']:hover {
+  background-color: #1a465f;
 }
-#contact .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-#contact .col-25 {
+#contact form .col-25 {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
-#contact .col-75 {
+#contact form .col-75 {
   float: left;
   width: 75%;
   margin-top: 6px;
 }
-#contact .row:after {
-  content: "";
+#contact form .row:after {
+  content: '';
   display: table;
   clear: both;
 }
-@media screen and (max-width: 600px) {
-  #contact .col-25,
-  #contact .col-75,
-  #contact input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+footer {
+  padding-bottom: 20px;
 }
