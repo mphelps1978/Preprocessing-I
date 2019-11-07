@@ -165,7 +165,6 @@ body {
 @heading-font: 'Supermercado One';
 @body-font: 'Oswald';
 
-
 /************************
 ******* MIXINS **********
 *************************/
@@ -180,6 +179,9 @@ body {
 	padding-bottom: 2%;
 }
 
+.standard-border() {
+	border: 1px solid black;
+}
 
 /************************
 **** GENERIC STYLING ****
@@ -187,7 +189,7 @@ body {
 body {
 	background: @hover-color;
 	font-size: 62.5%;
-font-family: @body-font
+	font-family: @body-font;
 }
 
 h1 {
@@ -195,11 +197,10 @@ h1 {
 	font-family: @heading-font;
 }
 
-h2{
-		.section-header();
-		font-family: @heading-font;
-	}
-
+h2 {
+	.section-header();
+	font-family: @heading-font;
+}
 
 p {
 	font-size: 1.5rem;
@@ -208,15 +209,15 @@ p {
 .container {
 	width: 70%;
 	margin: 0 auto;
-	border-radius: 20px;
-		background-color: #f2f2f2;
-		padding: 0 20px 0
+	border-radius: 3%;
+	background-color: #f2f2f2;
+	padding: 0 20px 0;
+	margin-top: 20%;
 }
 
 /************************
 ***** NESTED STYLING*****
 *************************/
-
 
 nav {
 	border-bottom: 2px solid black;
@@ -230,7 +231,8 @@ nav {
 		li {
 			.flex-normal();
 			justify-content: flex-end;
-			padding: 2%;
+			align-items: center;
+			padding: 1%;
 
 			&:hover {
 				background: @hover-color;
@@ -240,6 +242,7 @@ nav {
 		a {
 			text-decoration: none;
 			color: @link-color;
+padding: 0 8%;
 		} //close anchors
 	} // close navbar
 } // close nav
@@ -282,7 +285,6 @@ header {
 } //close intro
 
 #skillset {
-
 } //close skillset
 
 #history {
@@ -318,31 +320,69 @@ header {
 			cursor: pointer;
 			float: right;
 			&:hover {
-		background-color: @hover-color;
-			}// close hover
+				background-color: @hover-color;
+			} // close hover
 		} //close submit
-	.col-25 {
-		float: left;
-		width: 25%;
-		margin-top: 6px;
-	} // close col-25
+		.col-25 {
+			float: left;
+			width: 25%;
+			margin-top: 6px;
+		} // close col-25
 
-	.col-75 {
-		float: left;
-		width: 75%;
-		margin-top: 6px;
-	} // close col-75
+		.col-75 {
+			float: left;
+			width: 75%;
+			margin-top: 6px;
+		} // close col-75
 
-	/* Clear floats after the columns */
-	.row:after {
-		content: '';
-		display: table;
-		clear: both;
-	} // close row:after
-
+		/* Clear floats after the columns */
+		.row:after {
+			content: '';
+			display: table;
+			clear: both;
+		} // close row:after
 	} //close form
 } //close contact
 
-footer{
-padding-bottom: 20px;
+footer {
+	padding-bottom: 20px;
 } // close footer
+
+table {
+	font-size: 2rem;
+	.standard-border();
+	text-align: center;
+	margin: 0 auto;
+	tr {
+		padding: 20px;
+		.standard-border();
+		&:nth-child(even) {
+			background: #b4e6cf;
+		} //close even rows
+		&:nth-child(odd) {
+			background: #d5e6e0;
+		} // close odd rows
+	} // close tr
+	td {
+		padding: 20px;
+	} //close TD
+} // close table
+
+
+/************************
+*****  OTHER STYLING*****
+*************************/
+
+.fixed {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	background-color: #333;
+width: 70%;
+	margin: 0 auto;
+	margin-left: -20px;
+	text-align: center;
+	border-radius: 3%;
+}
+
+

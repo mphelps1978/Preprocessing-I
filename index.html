@@ -18,33 +18,37 @@
   <div class="container">
 
 
-    <nav>
 
-      <div class="navbar">
+     <div class="fixed">
+        <nav>
 
-        <ul>
+          <div class="navbar">
 
-          <li><a href="#">Top</a></li>
-          <li><a href="#">Skillsets</a></li>
-          <li><a href="#">Work History</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+            <ul>
 
-    <header>
-      <div class="avatar">
-        <img src="/images/Picard-StarTrek-640x353.jpg" alt="">
-      </div>
-      <div class="hero-text">
-        <l>
-          <h1>Jean Luc Picard</h1>
-          </>
-          <ul class="icons">
-            <li><i class="far fa-paper-plane fa-5x"></i></li>
-          </ul>
-      </div>
-    </header>
+              <li><a href="#top">Top</a></li>
+              <li><a href="#skillset">Skillsets</a></li>
+              <li><a href="#history">Work History</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <header id="top">
+          <div class="avatar">
+            <img src="/images/Picard-StarTrek-640x353.jpg" alt="">
+          </div>
+          <div class="hero-text">
+            <l>
+              <h1>Jean Luc Picard</h1>
+              </>
+              <ul class="icons">
+                <li><i class="far fa-paper-plane fa-5x"></i></li>
+              </ul>
+          </div>
+        </header>
+     </div>
+
     <section id="intro">
       <h2>Introduction</h2>
       <p>My name is Jean-Luc Picard. I have served the majority of my years as an officer in Starfleet, where I obtained
@@ -54,7 +58,7 @@
     <section id="skillset">
       <h2>Skillsets</h2>
       <div class="skills">
-        <p>I bring a wide variety of skills along with me. I am a leader first an foremost. My time at Starfleet has
+        <p>I bring a wide variety of skills along with me. I am a leader first and foremost. My time at Starfleet has
           given me the opportunity to command vessels with as many as 6,000 souls on board. With that privelidge came a
           great deal of responsibility. In addition, my time in Starfleet has allowed me to amass the historical and
           archaeological heritage of countless worlds and civilizations </p>
@@ -62,25 +66,75 @@
     </section>
     <section id="history">
       <h2>Work History</h2>
-      <!-- could be possible argument for a table here -->
-      <ul>
-        <li>2322-2326: Starfleet Academy</li>
-        <li>2327: USS Antares - Helmsman</li>
-        <li>2329: USS Majelan - Tactical Officer</li>
-        <li>2333: USS Stargazer - Second Officer</li>
-        <li>2333: USS Stargazer - First Officer</li>
-        <li>2334: USS Stargazer - Commanding Officer</li>
-        <li>2355: Temporary Relief of Duty, pending Court Marshall for the Maxia Incident, in which the Stargazer was
-          lost. cleared of all wrongdoing</li>
-        <li>2355: Student: University of Alpha Centauri - Archaeology (Ph.D)</li>
-        <li>2370: USS Portia - Commanding Officer</li>
-        <li>2364: USS Enterprise D: Commanding Officer</li>
-        <li>2372: USS Enterprise E: Commanding Officer</li>
-        <li>2409: Resigned Starfleet at request from UFP President</li>
-        <li>2409: Appointed Federation Ambassador to Vulcan</li>
-        <li>2452: Retired from UFP</li>
-      </ul>
 
+
+      <table>
+        <tr class="sfa">
+          <td class="date">2322</td>
+          <td cass="posting">StarFleet Academy</td>
+          <td class="duty">Cadet (Officer Training)</td>
+        </tr>
+        <tr class="antares">
+          <td class="date">2327</td>
+          <td cass="posting">USS Antares</td>
+          <td class="duty">Helmsman</td>
+        </tr>
+        <tr class="majelan">
+          <td class="date">2329</td>
+          <td cass="posting">USS Magjelin</td>
+          <td class="duty">Tactical Officer</td>
+        </tr>
+        <tr class="sgazer1">
+          <td class="date">2333</td>
+          <td cass="posting">USS Stargazer</td>
+          <td class="duty">Second Officer (Operations)</td>
+        </tr>
+        <tr class="sgazer2">
+          <td class="date">2333</td>
+          <td cass="posting">USS Stargazer</td>
+          <td class="duty">First Officer</td>
+        </tr>
+        <tr class="sgazer3">
+          <td class="date">2334</td>
+          <td cass="posting">USS Stargazer</td>
+          <td class="duty">Commanding Officer</td>
+        </tr>
+        <tr class="relieved">
+          <td class="date">2355</td>
+          <td cass="posting">Starfleet Headquarters</td>
+          <td class="duty">Unnasigned for Inquiry into Maxia Incident</td>
+        </tr>
+        <tr class="college">
+          <td class="date">2355</td>
+          <td cass="posting">Uiversity of Alpha Centauri</td>
+          <td class="duty">Recived Ph.D in Arcahaeology</td>
+        </tr>
+        <tr class="portia">
+          <td class="date">2370</td>
+          <td cass="posting">USS Portia</td>
+          <td class="duty">Commanding Officer</td>
+        </tr>
+        <tr class="enterpriseD">
+          <td class="date">2364</td>
+          <td cass="posting">USS Enterprise-D</td>
+          <td class="duty">Commanding Officer</td>
+        </tr>
+        <tr class="enterpriseE">
+          <td class="date">2372</td>
+          <td cass="posting">USS Enterprise-E</td>
+          <td class="duty">Commanding Officer</td>
+        </tr>
+        <tr class="vulcan">
+          <td class="date">2409</td>
+          <td cass="posting">United Federation of Planets</td>
+          <td class="duty">Ambassador to Vulcan</td>
+        </tr>
+        <tr class="retire">
+          <td class="date">2452</td>
+          <td cass="posting">None</td>
+          <td class="duty">Retired from UFP Duties</td>
+        </tr>
+      </table>
     </section>
     <section id="contact">
       <h2>Contact</h2>

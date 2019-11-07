@@ -194,9 +194,10 @@ p {
 .container {
   width: 70%;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 3%;
   background-color: #f2f2f2;
   padding: 0 20px 0;
+  margin-top: 20%;
 }
 /************************
 ***** NESTED STYLING*****
@@ -212,7 +213,8 @@ nav .navbar ul {
 nav .navbar li {
   display: flex;
   justify-content: flex-end;
-  padding: 2%;
+  align-items: center;
+  padding: 1%;
 }
 nav .navbar li:hover {
   background: #1a465f;
@@ -220,6 +222,7 @@ nav .navbar li:hover {
 nav .navbar a {
   text-decoration: none;
   color: #1c879c;
+  padding: 0 8%;
 }
 header {
   display: flex;
@@ -298,4 +301,37 @@ header .hero-text .icons li {
 }
 footer {
   padding-bottom: 20px;
+}
+table {
+  font-size: 2rem;
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 auto;
+}
+table tr {
+  padding: 20px;
+  border: 1px solid black;
+}
+table tr:nth-child(even) {
+  background: #b4e6cf;
+}
+table tr:nth-child(odd) {
+  background: #d5e6e0;
+}
+table td {
+  padding: 20px;
+}
+/************************
+*****  OTHER STYLING*****
+*************************/
+.fixed {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: #333;
+  width: 70%;
+  margin: 0 auto;
+  margin-left: -20px;
+  text-align: center;
+  border-radius: 3%;
 }
